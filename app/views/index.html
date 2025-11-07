@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="alerta">
+    </div>
+
+    <div class="titulo"> 
+        <h1>CATALOGO</h1>
+        <button id="add-producto">AÑADIR PRODUCTO</button>
+        <button class="list-producto">VER TODOS - ACTUALIZAR</button>
+    </div>
+   
+
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <form id="formulario_enviar">
+                <div>
+                    <span class="cerrar">&times;</span>
+                    <h2>Agregar producto</h2>
+                </div>
+
+                <div class="grupo-label">
+                    <label for="nombre" class="label-formulario">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="input-formulario">
+                </div>
+
+                <div class="grupo-label">
+                    <label for="precio" class="label-formulario">Precio</label>
+                    <input type="text" id="precio" name="precio" class="input-formulario">
+                </div>
+                
+                <div class="grupo-label">
+                    <label for="cantidad" class="label-formulario">Cantidad Stock</label>
+                    <input type="number" id="cantidad" name="cantidad" class="input-formulario">
+                </div>
+
+                <div class="grupo-boton">
+                    <button id="agregar-producto" class="buton-formulario" type="submit">Agregar</button>
+                    <button id="cancelar-formulario" class="buton-formulario" type="button">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="tabla">
+        <table id="miTabla">
+            <thead>
+                <tr>
+                    <th id="id">ID</th>
+                    <th id="td-nombre">NOMBRE</th>
+                    <th id="td-precio">PRECIO</th>
+                    <th id="td-cantidad">CANTIDAD</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modalActualizar" class="modal">
+        <div class="modal-contenido">
+            <form id="formulario_actualizar">
+                <div>
+                    <span class="cerrar">&times;</span>
+                    <h2>Editar producto</h2>
+                </div>
+
+                <input type="hidden" name="id" id="a-id">
+
+                <div class="grupo-label">
+                    <label for="nombre" class="label-formulario">Nombre</label>
+                    <input type="text" id="a-nombre" name="nombre" class="input-formulario">
+                </div>
+
+                <div class="grupo-label">
+                    <label for="precio" class="label-formulario">Precio</label>
+                    <input type="text" id="a-precio" name="precio" class="input-formulario">
+                </div>
+                
+                <div class="grupo-label">
+                    <label for="cantidad" class="label-formulario">Cantidad Stock</label>
+                    <input type="number" id="a-cantidad" name="cantidad" class="input-formulario">
+                </div>
+
+                <div class="grupo-boton">
+                    <button id="actualizar-producto" class="buton-formulario" type="submit">ACTUALIZAR</button>
+                    <button id="cancelar-formulario-actualizar" class="buton-formulario" type="button">CANCAELAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

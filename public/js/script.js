@@ -159,7 +159,7 @@ $(document).ready(function() {
           mensaje("green", "Producto actualizado correctamente");
         }
       },
-      error: function() {
+      error: function(res) {
         mensaje("red", res.responseJSON.error);
       }
     });
